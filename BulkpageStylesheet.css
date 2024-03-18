@@ -1,0 +1,107 @@
+body {
+    padding: none;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(75, 75, 75);
+    }
+    
+    img {
+    width: 100%;
+    height: auto;
+    padding: none;
+    margin: none;
+    }
+    
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .text-container {
+    background-color: rgb(75, 75, 75);
+    color: white;
+    float: left;
+    display: inline;
+    position: relative;
+    width: 88%;
+    height: auto;
+    margin-left: 10px;
+    }
+    
+    .pic-container {
+      height: auto;
+      width: 20%;
+      /*position: relative; */
+      float: left;
+      display: inline;
+    }
+
+    .pic-container-world {
+      height: auto;
+      width: 70%;
+      /*position: relative; */
+      float: left;
+      display: inline;
+    }
+
+    .pic-container-2 {
+      height: auto;
+      width: 20%;
+      margin-right: 80%;
+      /*position: relative; */
+      float: left;
+      display: inline;
+    }
+    
+    #page-title {
+      color: white;
+      /*margin-left: 7%; */
+      width: 20%;
+      text-align: center;
+      height: auto;
+      float: left;
+      display: inline;
+      margin-right: 70%;
+    }
+
+    #page-title-world {
+      color: white;
+      /*margin-left: 7%; */
+      width: 70%;
+      text-align: center;
+      height: auto;
+      float: left;
+      display: inline;
+      margin-right: 10%;
+    }
+    
+    .text-link {
+      color: rgb(94, 94, 204);
+    }
+
+    @media (max-width: 700px) {
+      .text-container {
+        width: 75%;
+      }
+      #page-title {
+        width: 100px;
+        margin-right: 50%;
+      }
+      #page-title-world {
+        width: 300px;
+        margin-right: 20%;
+      }
+      .pic-container {
+        width: 100px;
+        margin-right: 50%;
+      }
+      .pic-container-world {
+        width: 300px;
+        margin-right: 20%;
+      }
+      .pic-container-2 {
+        width: 100px;
+        margin-right: 70%;
+      }
+      }
