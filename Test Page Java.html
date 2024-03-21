@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+  <title>Name | Mirrors Multiverse</title>
+  <link rel="icon" type="image/x-icon" href="TolkienSymbol.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="TopnavStylesheet.css">
+  <link rel="stylesheet" href="SidenavStylesheet.css">
+  <link rel="stylesheet" href="BulkpageStylesheet.css">
+  <!--<link rel="stylesheet" href="DropdownStylesheet.css">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    };
+</script>
+
+<body>
+
+<div w3-include-html="Sidebar.html"></div>
+
+<h3 id="page-title">Name</h3>
+
+<section class="pic-container">
+  <img src="Concept Art Pics/Name.jpg" alt="Name"> 
+</section>
+
+<a class="text-link" href="link.html">Link</a>
+
+<section class="text-container">
+    <h3>Backstory</h3>
+    <p></p>
+    <h3>Details</h3>
+    <p></p>
+</section>
+
+
+
+
+<script>
+    includeHTML();
+</script>
+
+</body>
+</html>
