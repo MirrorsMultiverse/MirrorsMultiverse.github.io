@@ -23,6 +23,13 @@
 }
 }
 
+@media (max-width: 450px) {    /*For phone*/
+  .sidenav {
+    width: 20%;
+    /*height: 1200px;*/
+  }
+  }
+
 .sidenav a:hover {
   background-color: rgb(128, 191, 255);
   color: black;
